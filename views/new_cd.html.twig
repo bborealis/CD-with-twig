@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+        <title>New CD</title>
+    </head>
+    <body>
+        <div class='container'>
+            <h1>New CD</h1>
+            <p>Enter your new CD:</p>
+
+            <form action='/cds' method='post'>
+                <div class='form-group'>
+                    <label for='artist'>Enter the artist's name:</label>
+                    <input id='artist' name='artist' class='form-control' type='text'>
+                </div>
+
+    <!--new cd page is adding to home, but the button isn't taking us back-->
+                <button type='submit' class='btn-success'>Add</button>
+            </form>
+
+        </div>
+
+    </body>
+</html>

@@ -1,6 +1,6 @@
 <?php
 class CD {
-    private $artist
+    private $artist;
 
     function __construct($artist) {
         $this->artist = $artist;

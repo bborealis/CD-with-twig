@@ -1,0 +1,24 @@
+<html>
+<head>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+    <title>Welcome Page</title>
+</head>
+<body>
+    <div class='container'>
+        <h1>Welcome to your CD catalog!</h1>
+        {% if cds is not empty %}
+            <p> Here is a list of your CDs:</p>
+            <ul>
+                {% for cd in cds %}
+                    <li>{{ cd.getArtist }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    <form action='/cds' method='post'>
+        <button type='submit' class='btn-success'>Add a new CD</button>
+    </form>
+    
+
+    </div>
+</body>
+</html>

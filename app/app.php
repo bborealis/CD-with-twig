@@ -18,10 +18,11 @@
         return $app['twig']->render('cd.html.twig', array('cds' => CD::getAll()));
     });
 
-    $app->post("/cd", function() user ($app) {
+    $app->post("/cds", function() use ($app) {
+        //error undefined index: artist???
         $cd = new CD($_POST['artist']);
         $cd->save();
-        return $app['twig']->render('display_cd.html.twig', array('newcd' => $cd));
+        return $app['twig']->render('new_cd.html.twig', array('newcd' => $cd));
     });
 
     $app->post("delete_cd", function() use ($app) {
