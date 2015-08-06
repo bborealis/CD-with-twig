@@ -14,10 +14,11 @@
                 {% endfor %}
             </ul>
         {% endif %}
-    <form action='/cds' method='post'>
+        <!--took out the method='post', because this form is "getting", rather than "posting"-->
+    <form action='/cds'>
         <button type='submit' class='btn-success'>Add a new CD</button>
     </form>
-    
+
 
     </div>
 </body>
