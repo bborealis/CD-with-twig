@@ -10,7 +10,7 @@
             <p> Here is a list of your CDs:</p>
             <ul>
                 {% for cd in cds %}
-                    <li>{{ cd.getArtist }}</li>
+                    <li>{{ cd.getArtist }} : {{ cd.getAlbum }}</li>
                 {% endfor %}
             </ul>
         {% endif %}

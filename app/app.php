@@ -24,11 +24,10 @@
 
     $app->post("/", function() use ($app) {
         //error undefined index: artist???
-        $cd = new CD($_POST['artist']);
+        $cd = new CD($_POST['artist'], $_POST['album']);
         $cd->save();
         return $app['twig']->render('cd.html.twig', array('cds' => CD::getAll()));
     });
-
 
     $app->post("delete_cd", function() use ($app) {
         CD::deleteAll();

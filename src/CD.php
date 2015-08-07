@@ -1,9 +1,11 @@
 <?php
 class CD {
     private $artist;
+    private $album;
 
-    function __construct($artist) {
+    function __construct($artist, $album) {
         $this->artist = $artist;
+        $this->album = $album;
     }
 
     function setArtist ($artistName) {
@@ -12,6 +14,14 @@ class CD {
 
     function getArtist() {
         return $this->artist;
+    }
+
+    function setAlbum($albumName) {
+        $this->album = $albumName;
+    }
+
+    function getAlbum() {
+        return $this->album;
     }
 
     function save() {
