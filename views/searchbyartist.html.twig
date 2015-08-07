@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+        <title>Search by artist</title>
+    </head>
+    <body>
+        {% if cds is not empty %}
+            <p>Here is the artist you searched for:</p>
+            <ul>
+                {% for cd in cds %}
+                    {% if artistName == artistName %}
+                        <li>{{ cd.getArtist }} : {{ cd.getAlbum }}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <form action='/searchbyartist' method='get'>
+            <div class= 'form-group'>
+                <label for='artist'>Enter artist name:</label>
+                <input id='artist' name'artist' class='form control' type='text'>
+            </div>
+            <button type='submit' class='btn-success'>Submit</button>
+        </form>
+    </body>
+</html>

@@ -34,5 +34,11 @@
         return $app['twig']->render('delete_cd.html.twig');
     });
 
+    $app->get("/searchbyartist", function() use ($app) {
+        $artist_matching_search = array();
+        CD::getAll();
+        return $app['twig']->render('searchbyartist.html.twig');
+    });
+
     return $app;
 ?>

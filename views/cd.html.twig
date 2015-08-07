@@ -19,7 +19,14 @@
         <button type='submit' class='btn-success'>Add a new CD</button>
     </form>
 
-
+    {% if cds is not empty %}
+    <form action='/searchbyartist'>
+        <button type='submit' class='btn-success'>Search by artist</button>
+    </form>
+    <form action = 'delete_cd' method='post'>
+        <button type='submit' class="btn-danger">Clear List</button>
+    </form>
+    {% endif %}
     </div>
 </body>
 </html>
